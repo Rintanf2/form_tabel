@@ -1,0 +1,138 @@
+<html>
+    <head>
+       <center> Faktur Penjualan 
+        <style>
+
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+                
+
+            }
+        </style>
+    </head>
+    <body>
+      <table style="width:50%">
+        <tr>
+          <th colspan="2">No.#12345678 </th>
+          <th colspan="2">01 Januari 2022</th>
+        </tr>
+        <tr>
+           <td colspan="2"><b>Dibayarkan Ke:</b> <br> PT.Rintanatic <br> Jalan Beruang No.8 <br> Bandung, Jawa Barat 40111</td>
+           <td colspan="2"><b>Customer:</b> <br> Asep Sumarsep <br> Jalan baru No.2 <br> Bandung, Jawa Barat 402222 </td>
+        </tr>
+           <tr>
+           <td> <b> Barang/Deskripsi </b></td>
+           <td> <b>Qty.</b> </td>
+           <td><b>@</b></td>
+           <td><b>Harga</b> </td>
+        </tr>
+        <tr>
+          <td >Buku</td>
+          <td >2</td>
+          <td >5.000</td>
+          <td >10.000</td>
+        </tr>
+        <tr>
+          <td >Pulpen</td>
+          <td >3</td>
+          <td >1.000</td>
+          <td >3.000</td>
+        </tr>
+          <tr>
+          <td colspan="3"><b>Subtotal</b></td>
+          <td>13.000</td>
+        </tr>
+        <tr>
+          <td colspan="2"><b>PPN</b></td>
+          <td>11%</td>
+          <td>1,430</td>
+        </tr>
+        <tr>
+          <td colspan="3"><b>Total</b></td>
+          <td>14,430</td>
+        </tr>
+      </table>
+    </body>
+  </center>
+</html>
+
+<!-- tugas form -->
+<html><html>
+  <head>
+    <style type="text/css">
+      .form-style-3{
+        max-width: 500px;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      }
+      .form-style-3 label{
+        display:block;
+      }
+      .form-style-3 fieldset{
+        border: 1px solid #180505;
+        background: #069ac3;
+        box-shadow:#180505;
+        -moz-box-shadow:#180505;
+        -webkit-box-shadow:#180505;
+      }
+      .form-style-3 input[type=text],
+      .form-style-3 input[type=number],
+      .form-style-3 textarea{
+        border: 1px solid #00090b;
+        outline: none;
+        color: #020e10;
+        box-shadow: #1ba4d6;
+        -moz-box-shadow: #23c5e1;
+        -webkit-box-shadow: #23c5e1;
+        background: #eff9ff;
+        width:50%;
+      
+      }
+      .form-style-3  input[type=submit],
+      .form-style-3  input[type=button]{
+        background: #098ba2;
+        border: 1px solid #e2e7e8;
+        color: #cbefff;
+        box-shadow: #238da0;
+        -moz-box-shadow: #238da0;
+        -webkit-box-shadow: #238da0;	
+        font-weight: bold;
+      }
+      </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Form Buku Tamu</title>
+  </head>
+        <body>
+       <center><strong>Form Buku Tamu</strong>
+        <div class="form-style-3">
+        <form  method="get">
+        <fieldset>
+        <label for="Nama">Nama : </label><input type="text" name="nama">
+       <label for="telepon">No.Telephone : </label><input type="number" name="phone" id="phone">
+       <label for="pesan">pesan</label>
+       <textarea name="text" id="text" cols="30" rows="10"></textarea><br> <br>
+       <input type="submit" name="kirim" id="kirim"><br>
+      </fieldset>
+       <script>
+           let kirim=document.getElementById('kirim');
+           kirim.addEventListener('click',function(){
+               let phone = document.getElementById('phone').value;
+               let text = document.getElementById('text').value;
+               let win = window.open('https://api.whatsapp.com/send?phone='+phone+'&text='+text);
+            if (win) {
+                //Browser has allowed it to be opened
+                win.focus();
+            } else {
+                alert('tolong aktifkan ');
+                 }
+            });
+           
+       </script>
+
+    
+    
+    </body>
+  </div>
+  </center>
+</html>
